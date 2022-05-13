@@ -7,25 +7,24 @@
     "classnames": "^2.2.6",
     "clone": "^2.1.1",
     "cypress": "^5.3.0",
-    "cypress-cucumber-preprocessor" : "4.0.0",
-    "gh-pages": "^1.1.0",
+    "gh-pages": "^4.0.0",
     "lint-staged": "^6.0.1",
-    "mdbreact": "^4.27.0",
+    "mdbreact": "^5.2.0",
     "prettier": "^1.10.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-jsonschema-form": "^1.0.0",
-    "react-markdown": "^3.1.4",
+    "react-markdown": "^8.0.3",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.17",
-    "recompose": "^0.26.0",
+    "react-scripts": "^5.0.1",
+    "recompose": "^0.17.0",
     "semantic-ui-css": "^2.2.12",
-    "semantic-ui-react": "^0.77.2",
+    "semantic-ui-react": "^2.1.2",
     "uuid": "^8.3.1"
   },
- "cypress-cucumber-preprocessor": {
-  "nonGlobalStepDefinitions": false
- },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false
+  },
   "scripts": {
     "start-api": "cd api && export FLASK_APP=app.py && flask run",
     "start": "react-scripts start",
@@ -42,5 +41,17 @@
       "git add"
     ]
   },
-  "homepage": "https://elinvar.de/"
+  "homepage": "https://elinvar.de/",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

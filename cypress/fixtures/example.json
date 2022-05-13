@@ -1,0 +1,20 @@
+{
+  "contactDetails": {
+    "Surname": "Yarra",
+    "Name": "Anusha",
+    "Email": "anusha@yopmail.com",
+    "Company": "TI",
+    "PhoneNumber": "9988434391",
+    "Message": "text"
+  },
+  "menulinks": {
+    "yourPlatoform": "https://elinvar.co.uk/your-platform/",
+    "Team": "https://elinvar.co.uk/team/",
+    "Career": "https://elinvar.co.uk/jobs/",
+    "news": "https://elinvar.co.uk/news/",
+    "Contact": "https://elinvar.co.uk/contact/",
+    "EN": "https://elinvar.co.uk",
+    "DE": "https://elinvar.de",
+    "FR": "https://elinvar.fr"
+  }
+}

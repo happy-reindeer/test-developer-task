@@ -1,5 +1,6 @@
 {
-    "baseUrl": "http://localhost:3000/#",
+    "baseUrl1": "http://localhost:3000/#",
     "testFiles": "**/*.feature",
-    "experimentalNetworkStubbing": true
+    "experimentalNetworkStubbing": true,
+    "baseUrl": "https://elinvar.co.uk/"
 }
