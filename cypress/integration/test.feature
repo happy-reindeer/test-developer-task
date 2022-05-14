@@ -10,7 +10,7 @@ Feature: Home page validations
         Given I navigate to the Elinvar website
         And I validate the lenght of menu list items
         And I validate the href links of Menu
-        Then I Validate the language mousehover
+        Then I Validate the mousehover functionality
 
 
     Scenario: Contact tab validation1
@@ -35,14 +35,15 @@ Feature: Home page validations
     Scenario:  Your Platform tab validation
         Given I navigate to the Elinvar website
         And  I click on Your Platform menu item
-        And  validate the redirection part by the end point url for platform
+        And  I validate the redirection part by the end point url for platform
         Then I Validate the api success status for platform
 
     Scenario:  Team tab validation
         Given I navigate to the Elinvar website
         And  I click on Team menu item
-        And I Validate the api success status for Team
         And I Validate the text validation for team management title
+        And I Validate the api success status for Team
+      
 
     Scenario:  News tab validation
         Given I navigate to the Elinvar website

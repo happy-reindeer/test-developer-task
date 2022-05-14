@@ -1,6 +1,6 @@
 
 export default class CypressPageObject {
-  IncludeInUrl(url) {
+  includeUrl(url) {
     return cy.url().should('include', url);
   }
   topNavigationLinks() {

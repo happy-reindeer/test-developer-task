@@ -15,7 +15,7 @@ Given('I navigate to the Elinvar website', () => {
 })
 // Scenario 1
 Then('I validate the website title', () => {
-    pageObjects.IncludeInUrl('elinvar.co.uk');
+    pageObjects.includeUrl('elinvar.co.uk');
     pageObjects.getByText('The WealthTech Platform as a Service').should('be.visible');
 })
 // Scenario 2
@@ -27,7 +27,7 @@ And('I validate the href links of Menu', () => {
    pageObjects.menuValidation(menu);
 })
 
-Then('I find the list and validate the language of website for each language', () => {
+Then('I Validate the mousehover functionality', () => {
     pageObjects.getByText("EN").trigger('mouseover', { fixture : true });
 })
 
@@ -38,7 +38,7 @@ And('I click on contact menu item', () => {
 })
 
 And('I validate the redirection part by the end point url for contact', () => {
-    pageObjects.shouldIncludeInUrl('/contact/');
+    pageObjects.includeUrl('/contact/');
 })
 
 And('I find the contact form', () => {
@@ -70,7 +70,7 @@ And('I click on Your Platform menu item', () => {
 })
 
 And('I validate the redirection part by the end point url for platform', () => {
-    pageObjects.IncludeInUrl('your-platform/');
+    pageObjects.includeUrl('your-platform/');
 })
 
 Then('I Validate the api success status for platform', () => {
@@ -87,8 +87,14 @@ And('I Validate the api success status for Team', () => {
 })
 
 And('I Validate the text validation for team management title', () => {
+    pageObjects.includeUrl('team/');
+})
+
+And('I Validate the text validation for team management title', () => {
     pageObjects.getByText('Our Management').should('be.visible');
 })
+
+
 
 // Scenarios 7
 
@@ -106,18 +112,18 @@ And('I Validate the text validation for news section', () => {
 
 And('I validate the press functionality', () => {
     pageObjects.clickOnhref("#press");
-    pageObjects.IncludeInUrl('/news/#press');
+    pageObjects.includeUrl('/news/#press');
     pageObjects.getByText("Press releases").should('be.visible');
 })
 
 And('I validate the twitter functionality', () => {
     pageObjects.clickOnhref("#twitter");
-    pageObjects.IncludeInUrl('/news/#twitter');
+    pageObjects.includeUrl('/news/#twitter');
     pageObjects.getByText("Last Tweets").should('be.visible');
 })
 
 And('I validate the media functionality', () => {
     pageObjects.clickOnhref("#media");
-    pageObjects.IncludeInUrl('/news/#media');
+    pageObjects.includeUrl('/news/#media');
     pageObjects.getByText("Here you find a selection of media reports on Elinvar").should('be.visible');
 })
