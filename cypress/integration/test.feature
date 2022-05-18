@@ -5,7 +5,7 @@ Feature: Home page validations
     Scenario: Navigate to Home page and validate the website content
         Given I navigate to the website
         And I get the Navigation menu list
-        Then I validate menu list items length
+        Then I validate menu list items and their size
 
     Scenario: Description tab validation
         Given I navigate to the website

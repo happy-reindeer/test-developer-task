@@ -9,23 +9,23 @@ export default class CypressPageObject {
   }
 
   getAPiResponseStutusforGetAssets() {
-    cy.request('/getAssets/').then((response) => {
+    cy.request('getAssets').then((response) => {
       expect(response.status).to.eq(200)
     })
   }
 
   menuValidation(menu) {
     let expectedMenuLinks = Object.values(menu.menulinks);
-  cy.get('.container > .ui').find('a').each(() => {
-    })
-      .then(($actualLinks) => {
-        expect($actualLinks).to.have.length(3); 
+    cy.get('div[class*="menu"]').find('a').each(($li, index, $list) => {
+      cy.wrap($li).invoke('attr', "href").then((href) => {
+        expect(href).to.be.equal(expectedMenuLinks[index]);
+        expect($list.length).to.be.equal(expectedMenuLinks.length);
       })
-      expect(expectedMenuLinks).to.have.lengthOf(3); 
-      
+    })
   }
 
-  getTextfield(email) {
+  getTextfield(email
+    ) {
     cy.get('#defaultFormAddAsset').type(email);
   }
 

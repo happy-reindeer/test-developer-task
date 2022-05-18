@@ -23,7 +23,7 @@ And('I get the Navigation menu list', () => {
     pageObjects.topNavigationLinks().should('be.visible');
 })
 
-Then('I validate menu list items length', () => {
+Then('I validate menu list items and their size', () => {
     pageObjects.menuValidation(menu);
 })
 
