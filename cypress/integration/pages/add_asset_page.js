@@ -15,6 +15,7 @@ export default class AddAssetPage {
     }
 
     enterAssetName(assetName){
+        cy.get(this.assetNameInput).clear()
         cy.get(this.assetNameInput).type(assetName)
     }
 
@@ -36,6 +37,18 @@ export default class AddAssetPage {
 
     getInValidFormatMessage(){
         return cy.get(this.invalidFormatMessage)
+    }
+
+    clickOnPopUpCloseButton(){
+        cy.get(this.closeCrossIcon).click()
+    }
+
+    getCorrectValidation(){
+        return cy.get(this.validFormatMessage)
+    }
+
+    getDialogPopup(){
+        return cy.get(this.closeButton)
     }
 }
     
