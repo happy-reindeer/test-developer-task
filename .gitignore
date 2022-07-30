@@ -1,2 +1,4 @@
 node_modules
 api\__pycache__
+cypress/screenshots
+package-lock.json
