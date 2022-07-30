@@ -76,12 +76,9 @@ Then('I can see the asset {string} in existing asset lists', (assetName) => {
         assetName = runtimeDict[assetName]
     }
     existingAssetPage.selectShowEntries("100")
-    const assetList = []
-    existingAssetPage.getAssetIds().each((assets, i) => {
-        assetList.push(assets.text())
-    })
-    cy.then(()=>{
-        expect(assetList.includes(assetName)).to.be.true;
+    existingAssetPage.getAssetIds().then(($assets) => {
+         const assetList = Cypress._.map($assets, (asset) => asset.textContent)
+         expect(assetList).to.include(assetName)
     })
 });
 
